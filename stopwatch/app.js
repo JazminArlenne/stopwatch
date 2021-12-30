@@ -32,19 +32,14 @@ window.onload = function (){
         var elemento = document.getElementById("filas");
 
         elemento.appendChild(fila);
-        
-        console.log(text);
-
     
     }
 
     btnReset.onclick = function(){
         clearInterval(interval);
 
-        var td = document.getElementsByTagName("td");
-        var elemento = document.getElementById("filas");
-        elemento.parentNode.removeChild(elemento);
-
+        document.getElementById("filas").innerHTML = "";
+     
         tens = "00";
         seconds = "00";
         minutes = "00";
