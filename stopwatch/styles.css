@@ -53,6 +53,21 @@ button:active{
     border-bottom-width: 2px;
 }
 
+th{
+    font-size: 2.3em;
+    text-align: center; 
+    color: darkgreen;
+    margin-bottom: 50px;
+}
+
+td{
+    margin-top: 15px;
+    font-size: 1.7em;
+    text-align: center;
+    color: darkslategray;
+    margin-bottom: 5px;
+}
+
 #title{
  font-size: 3.3em;
  text-align: center; 

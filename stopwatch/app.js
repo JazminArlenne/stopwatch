@@ -20,11 +20,30 @@ window.onload = function (){
 
     btnStop.onclick = function(){
         clearInterval(interval);
+
+        var text = document.createTextNode(`${setMinutes.innerHTML}:${setSeconds.innerHTML}:${setTens.innerHTML}`);
+        var fila = document.createElement("tr");
+        var fContent = document.createElement("td");
+
+        fContent.appendChild(text);
+
+        fila.appendChild(fContent);
+
+        var elemento = document.getElementById("filas");
+
+        elemento.appendChild(fila);
+        
+        console.log(text);
+
     
     }
 
     btnReset.onclick = function(){
         clearInterval(interval);
+
+        var td = document.getElementsByTagName("td");
+        var elemento = document.getElementById("filas");
+        elemento.parentNode.removeChild(elemento);
 
         tens = "00";
         seconds = "00";
@@ -32,6 +51,8 @@ window.onload = function (){
         setTens.innerHTML = tens;
         setSeconds.innerHTML = seconds;
         setMinutes.innerHTML = minutes;
+
+        
     }
 
     function timer (){
